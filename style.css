@@ -125,6 +125,53 @@
     color: var(--text-color);
 }
 
+/* Hero Section with Main Folder Background Image */
+.hero {
+    background-image: 
+        linear-gradient(rgba(67, 97, 238, 0.85), rgba(58, 12, 163, 0.85)),
+        url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    padding: 8rem 0 4rem;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+        min-height: 70vh;
+        padding: 6rem 0 3rem;
+    }
+}
+
+/* Journal page hero - different overlay */
+.journal-hero {
+    background-image: 
+        linear-gradient(rgba(106, 17, 203, 0.85), rgba(37, 117, 252, 0.85)),
+        url('hero-bg.jpg');
+}
+
+/* About page hero */
+.about-hero {
+    background-image: 
+        linear-gradient(rgba(247, 37, 133, 0.85), rgba(76, 201, 240, 0.85)),
+        url('hero-bg.jpg');
+}
+
+/* Projects page hero */
+.projects-hero {
+    background-image: 
+        linear-gradient(rgba(255, 159, 28, 0.85), rgba(255, 107, 107, 0.85)),
+        url('hero-bg.jpg');
+}
 /* Hero Content Styles */
 .hero-content {
     width: 90%;
