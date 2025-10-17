@@ -1,5 +1,20 @@
-/* Add these missing styles AFTER the .post-card styles */
+/* ... your existing CSS above ... */
 
+.post-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ========== ADD MISSING STYLES RIGHT HERE ========== */
 /* Post Meta Styles */
 .post-meta {
     display: flex;
@@ -111,59 +126,10 @@
 }
 
 /* Hero Content Styles */
-/* ========== HERO SECTIONS ========== */
-.hero {
-    background-image: 
-        linear-gradient(rgba(67, 97, 238, 0.85), rgba(58, 12, 163, 0.85)),
-        url('../images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white;
-    padding: 8rem 0 4rem;
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-/* For mobile devices */
-@media (max-width: 768px) {
-    .hero {
-        background-attachment: scroll;
-        min-height: 70vh;
-        padding: 6rem 0 3rem;
-    }
-}
-
-/* Journal page hero - different overlay */
-.journal-hero {
-    background-image: 
-        linear-gradient(rgba(106, 17, 203, 0.85), rgba(37, 117, 252, 0.85)),
-        url('../images/hero-bg.jpg');
-}
-
-/* About page hero */
-.about-hero {
-    background-image: 
-        linear-gradient(rgba(247, 37, 133, 0.85), rgba(76, 201, 240, 0.85)),
-        url('../images/hero-bg.jpg');
-}
-
-/* Projects page hero */
-.projects-hero {
-    background-image: 
-        linear-gradient(rgba(255, 159, 28, 0.85), rgba(255, 107, 107, 0.85)),
-        url('../images/hero-bg.jpg');
-}
-
 .hero-content {
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
-    position: relative;
-    z-index: 2;
 }
 
 .hero-title {
@@ -177,9 +143,20 @@
     margin-bottom: 2rem;
     opacity: 0.9;
 }
-/* ========== END HERO SECTIONS ========== */
 
 /* Featured Posts Section */
 .featured-posts {
     margin-bottom: 4rem;
 }
+/* ========== END MISSING STYLES ========== */
+
+/* About Preview */
+.about-preview {
+    background: white;
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+/* ... rest of your CSS below ... */
