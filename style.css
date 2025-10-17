@@ -104,9 +104,11 @@ body {
 
 /* ========== HERO SECTIONS ========== */
 .hero {
-    background-image: 
-        linear-gradient(rgba(67, 97, 238, 0.85), rgba(58, 12, 163, 0.85)),
-        url('hero-bg.jpg');
+    background: linear-gradient(rgba(67, 97, 238, 0.85), rgba(58, 12, 163, 0.85));
+
+
+
+    
     background-color: var(--primary-color); /* Fallback color */
     background-size: cover;
     background-position: center;
