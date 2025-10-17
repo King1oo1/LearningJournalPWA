@@ -3,40 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Journal - Journal</title>
+    <title>My Learning Journal | Journal</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <h1 class="nav-logo">My Learning Journal</h1>
+            <div class="nav-logo">
+                <h2>📚 Learning Journal</h2>
+            </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="journal.html" class="active">Journal</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="journal.html" class="nav-link active">Journal</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <main class="container">
-        <h2>Weekly Journal Entries</h2>
-        
-        <article class="journal-entry">
-            <h3>Week 1: Introduction to Mobile Development</h3>
-            <p class="journal-date">January 15, 2024</p>
-            <p>This week I learned about the fundamentals of mobile application development and started planning my learning journal PWA...</p>
-        </article>
+    <header class="hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 6rem 0 3rem;">
+        <div class="hero-content">
+            <h1 class="hero-title">My Learning Journal</h1>
+            <p class="hero-subtitle">Weekly reflections and technical learnings</p>
+        </div>
+    </header>
 
-        <article class="journal-entry">
-            <h3>Week 2: Frontend Fundamentals</h3>
-            <p class="journal-date">January 22, 2024</p>
-            <p>This week focused on HTML and CSS for building responsive, mobile-first web applications. I implemented the basic structure of my learning journal...</p>
-        </article>
+    <main class="container">
+        <div class="journal-layout">
+            <div class="journal-entries">
+                <article class="journal-entry">
+                    <header class="entry-header">
+                        <h2>Week 2: Frontend Fundamentals & Mobile-First Design</h2>
+                        <div class="entry-meta">
+                            <span class="date">January 22, 2024</span>
+                            <span class="category">Frontend</span>
+                        </div>
+                    </header>
+                    
+                    <div class="entry-content">
+                        <h3>How did you approach mobile-first design?</h3>
+                        <p>I started by designing for the smallest screens first, using a single-column layout and ensuring all interactive elements were touch-friendly. I implemented CSS Grid and Flexbox for the core layout structure, then used media queries with <code>min-width</code> breakpoints to progressively enhance the design for larger screens.</p>
+
+                        <h3>What was the most useful HTML or CSS concept you applied this week?</h3>
+                        <p>The most valuable concept was CSS Grid for creating responsive layouts without media queries. Using <code>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))</code> allowed me to create flexible card layouts that automatically adapt to different screen sizes. CSS custom properties (variables) were also extremely useful for maintaining consistent spacing and colors.</p>
+
+                        <h3>What part of HTML or CSS did you find most challenging or confusing?</h3>
+                        <p>The most challenging aspect was managing the navigation menu's transition from mobile hamburger style to desktop horizontal layout. Ensuring consistent spacing and alignment across different browsers and devices also required careful testing. CSS specificity was sometimes confusing when trying to override default styles.</p>
+                    </div>
+                </article>
+
+                <article class="journal-entry">
+                    <header class="entry-header">
+                        <h2>Week 1: Introduction to Mobile Development</h2>
+                        <div class="entry-meta">
+                            <span class="date">January 15, 2024</span>
+                            <span class="category">PWA</span>
+                        </div>
+                    </header>
+                    
+                    <div class="entry-content">
+                        <p>This week focused on understanding Progressive Web Apps and their core principles. I learned about service workers, web app manifests, and the importance of responsive design...</p>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="journal-sidebar">
+                <div class="sidebar-widget">
+                    <h3>Categories</h3>
+                    <ul class="categories">
+                        <li><a href="#">Frontend Development</a></li>
+                        <li><a href="#">PWA</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3>Recent Entries</h3>
+                    <ul class="recent-entries">
+                        <li><a href="#">Mobile-First Design Principles</a></li>
+                        <li><a href="#">CSS Grid vs Flexbox</a></li>
+                        <li><a href="#">Progressive Web Apps Introduction</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 My Learning Journal</p>
+        <div class="footer-content">
+            <p>&copy; 2024 My Learning Journal. Built with HTML & CSS.</p>
+        </div>
     </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
