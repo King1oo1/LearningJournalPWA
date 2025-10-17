@@ -334,3 +334,109 @@ body {
 .mb-1 { margin-bottom: 1rem; }
 .mb-2 { margin-bottom: 2rem; }
 .mt-2 { margin-top: 2rem; }
+
+
+
+/* Journal Layout */
+.journal-layout {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+}
+
+.journal-entry {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.entry-header {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.entry-header h2 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.entry-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.entry-content h3 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.5rem;
+}
+
+.entry-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+code {
+    background: var(--light-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+/* Sidebar */
+.journal-sidebar {
+    order: -1;
+}
+
+.sidebar-widget {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.sidebar-widget h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.categories,
+.recent-entries {
+    list-style: none;
+}
+
+.categories li,
+.recent-entries li {
+    margin-bottom: 0.5rem;
+}
+
+.categories a,
+.recent-entries a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.categories a:hover,
+.recent-entries a:hover {
+    color: var(--primary-color);
+}
+
+/* Tablet and Desktop Layout */
+@media (min-width: 768px) {
+    .journal-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .journal-sidebar {
+        order: 1;
+    }
+}
