@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Journal - Projects</title>
+    <title>My Learning Journal | Projects</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <h1 class="nav-logo">My Learning Journal</h1>
+            <div class="nav-logo">
+                <h2>📚 Learning Journal</h2>
+            </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="journal.html">Journal</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="journal.html" class="nav-link">Journal</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- ADD THE HERO SECTION RIGHT HERE -->
     <header class="hero projects-hero">
         <div class="hero-content">
             <h1 class="hero-title">My Projects</h1>
@@ -28,32 +36,41 @@
     </header>
 
     <main class="container">
-        <!-- Remove the old h2 since we now have the hero title -->
-        <!-- <h2>My Projects</h2> -->
-        
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Learning Journal PWA</h3>
-                <p>A progressive web app that documents my learning journey through mobile development.</p>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+        <section class="featured-posts">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Learning Journal PWA</h3>
+                    <p>A progressive web app that documents my learning journey through mobile development. Features responsive design, mobile-first approach, and clean UI.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PWA</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Mobile Weather App</h3>
+                    <p>A responsive weather application designed with mobile-first principles. Provides real-time weather data with intuitive interface.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, API Integration</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Task Management App</h3>
+                    <p>A mobile task manager with offline capabilities and local storage. Helps users organize tasks efficiently across devices.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Local Storage</p>
+                </div>
             </div>
-            
-            <div class="project-card">
-                <h3>Mobile Weather App</h3>
-                <p>A responsive weather application designed with mobile-first principles.</p>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, API</p>
-            </div>
-            
-            <div class="project-card">
-                <h3>Task Management App</h3>
-                <p>A mobile task manager with offline capabilities and local storage.</p>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PWA</p>
-            </div>
-        </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 My Learning Journal</p>
+        <div class="footer-content">
+            <p>&copy; 2024 My Learning Journal. Built with HTML & CSS.</p>
+        </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
