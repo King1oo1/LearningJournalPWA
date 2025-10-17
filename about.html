@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Learning Journal | Projects</title>
+    <title>My Learning Journal | About</title>  <!-- FIXED: Changed from "Projects" to "About" -->
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -17,8 +17,8 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="journal.html" class="nav-link">Journal</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>  <!-- FIXED: Added active class -->
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -28,33 +28,32 @@
         </div>
     </nav>
 
-    <header class="hero projects-hero">
+    <header class="hero about-hero">  <!-- FIXED: Changed from projects-hero to about-hero -->
         <div class="hero-content">
-            <h1 class="hero-title">My Projects</h1>
-            <p class="hero-subtitle">Showcasing my creative and technical work</p>
+            <h1 class="hero-title">About Me</h1>
+            <p class="hero-subtitle">Get to know my journey and skills</p>
         </div>
     </header>
 
     <main class="container">
-        <section class="featured-posts">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Learning Journal PWA</h3>
-                    <p>A progressive web app that documents my learning journey through mobile development. Features responsive design, mobile-first approach, and clean UI.</p>
-                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PWA</p>
+        <section class="about-preview">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm a Computer Science student passionate about mobile development and creative technology.</p>
+                    <p>This learning journal documents my journey through the Mobile Application Development course, where I'm building skills in frontend development, responsive design, and progressive web apps.</p>
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                        <li>Mobile-First Development</li>
+                        <li>Progressive Web Apps</li>
+                        <li>Git & GitHub</li>
+                    </ul>
                 </div>
-                
-                <div class="project-card">
-                    <h3>Mobile Weather App</h3>
-                    <p>A responsive weather application designed with mobile-first principles. Provides real-time weather data with intuitive interface.</p>
-                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, API Integration</p>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Task Management App</h3>
-                    <p>A mobile task manager with offline capabilities and local storage. Helps users organize tasks efficiently across devices.</p>
-                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Local Storage</p>
+                <div class="about-image">
+                    <div class="image-placeholder">👨‍💻</div>
                 </div>
             </div>
         </section>
