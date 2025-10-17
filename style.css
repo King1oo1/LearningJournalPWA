@@ -104,15 +104,20 @@ body {
 
 /* ========== HERO SECTIONS ========== */
 .hero {
-    background: 
+    background-image: 
         linear-gradient(rgba(67, 97, 238, 0.85), rgba(58, 12, 163, 0.85)),
-        url('hero-bg.jpg') center/cover no-repeat fixed;
+        url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
     padding: 8rem 0 4rem;
     text-align: center;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 /* For mobile devices */
@@ -124,25 +129,23 @@ body {
     }
 }
 
-/* Journal page hero */
+/* Different overlays for different pages */
 .journal-hero {
-    background: 
+    background-image: 
         linear-gradient(rgba(106, 17, 203, 0.85), rgba(37, 117, 252, 0.85)),
-        url('hero-bg.jpg') center/cover no-repeat fixed;
+        url('hero-bg.jpg');
 }
 
-/* About page hero */
 .about-hero {
-    background: 
+    background-image: 
         linear-gradient(rgba(247, 37, 133, 0.85), rgba(76, 201, 240, 0.85)),
-        url('hero-bg.jpg') center/cover no-repeat fixed;
+        url('hero-bg.jpg');
 }
 
-/* Projects page hero */
 .projects-hero {
-    background: 
+    background-image: 
         linear-gradient(rgba(255, 159, 28, 0.85), rgba(255, 107, 107, 0.85)),
-        url('hero-bg.jpg') center/cover no-repeat fixed;
+        url('hero-bg.jpg');
 }
 
 .hero-content {
@@ -164,6 +167,8 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
 }
+
+
 
 /* ========== MAIN CONTENT ========== */
 .container {
