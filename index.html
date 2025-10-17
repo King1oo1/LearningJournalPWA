@@ -3,36 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Journal - Home</title>
+    <title>My Learning Journal | Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <h1 class="nav-logo">My Learning Journal</h1>
+            <div class="nav-logo">
+                <h2>📚 Learning Journal</h2>
+            </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="journal.html">Journal</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="journal.html" class="nav-link">Journal</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to My Learning Journey</h1>
+            <p class="hero-subtitle">Documenting my progress in Mobile Application Development and creative computing</p>
+            <a href="#featured" class="cta-button">Explore My Work</a>
+        </div>
+    </header>
+
+    <!-- Featured Posts -->
     <main class="container">
-        <section class="hero">
-            <h2>Welcome to My Learning Journey</h2>
-            <p>This site documents my progress through the Mobile Application Development course and showcases my projects.</p>
+        <section id="featured" class="featured-posts">
+            <h2 class="section-title">Featured Journal Entries</h2>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="post-date">Jan 22, 2024</span>
+                        <span class="post-category">Frontend</span>
+                    </div>
+                    <h3 class="post-title">Mobile-First Design Principles</h3>
+                    <p class="post-excerpt">Exploring responsive design patterns and CSS Grid for creating adaptable layouts...</p>
+                    <a href="journal.html" class="read-more">Read More →</a>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="post-date">Jan 15, 2024</span>
+                        <span class="post-category">PWA</span>
+                    </div>
+                    <h3 class="post-title">Getting Started with Progressive Web Apps</h3>
+                    <p class="post-excerpt">Understanding the core concepts of PWAs and their benefits for mobile development...</p>
+                    <a href="journal.html" class="read-more">Read More →</a>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="post-date">Jan 8, 2024</span>
+                        <span class="post-category">HTML/CSS</span>
+                    </div>
+                    <h3 class="post-title">Semantic HTML Best Practices</h3>
+                    <p class="post-excerpt">Learning how to structure content accessibly with proper semantic elements...</p>
+                    <a href="journal.html" class="read-more">Read More →</a>
+                </article>
+            </div>
         </section>
-        
-        <section class="intro">
-            <h3>About This Site</h3>
-            <p>This Progressive Web App serves as my learning log, personal portfolio, and professional profile. I'll be updating it weekly with new skills and insights.</p>
+
+        <!-- About Preview -->
+        <section class="about-preview">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I'm a Computer Science student passionate about mobile development, creative technology, and user-centered design. This journal documents my learning journey through the Mobile Application Development course.</p>
+                    <a href="about.html" class="cta-button secondary">Learn More About Me</a>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">👨‍💻</div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 My Learning Journal</p>
+        <div class="footer-content">
+            <p>&copy; 2024 My Learning Journal. Built with HTML & CSS.</p>
+        </div>
     </footer>
 </body>
 </html>
