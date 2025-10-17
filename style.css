@@ -103,7 +103,6 @@ body {
 }
 
 /* Hero Section */
-/* Enhanced Hero Section with Background Image */
 .hero {
     background-image: 
         linear-gradient(rgba(67, 97, 238, 0.8), rgba(58, 12, 163, 0.8)),
@@ -111,7 +110,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Creates parallax effect */
+    background-attachment: fixed;
     color: white;
     padding: 8rem 0 4rem;
     text-align: center;
@@ -148,6 +147,42 @@ body {
     background-image: 
         linear-gradient(rgba(255, 159, 28, 0.8), rgba(255, 107, 107, 0.8)),
         url('https://images.unsplash.com/photo-1584004400883-35a54de8b74c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170');
+}
+
+/* ADD MISSING STYLES FOR POSTS GRID AND CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--dark-color);
+}
+
+.posts-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 4rem;
+}
+
+.post-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 /* About Preview */
@@ -195,7 +230,6 @@ body {
     padding: 2rem 0;
     margin-top: 4rem;
 }
-
 
 /* Journal Layout */
 .journal-layout {
@@ -290,17 +324,6 @@ code {
     color: var(--primary-color);
 }
 
-/* Tablet and Desktop Layout */
-@media (min-width: 768px) {
-    .journal-layout {
-        grid-template-columns: 2fr 1fr;
-    }
-    
-    .journal-sidebar {
-        order: 1;
-    }
-}
-
 /* Media Queries - Tablet */
 @media (min-width: 768px) {
     .hamburger {
@@ -337,6 +360,15 @@ code {
         flex-direction: row;
         text-align: left;
     }
+
+    /* MOVED JOURNAL LAYOUT TABLET STYLES HERE */
+    .journal-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .journal-sidebar {
+        order: 1;
+    }
 }
 
 /* Media Queries - Desktop */
@@ -359,6 +391,3 @@ code {
 .mb-1 { margin-bottom: 1rem; }
 .mb-2 { margin-bottom: 2rem; }
 .mt-2 { margin-top: 2rem; }
-
-
-
