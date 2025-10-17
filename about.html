@@ -1,34 +1,46 @@
+<!-- Remove the duplicate navigation and fix the structure -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Journal - About</title>
+    <title>My Learning Journal | About</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <h1 class="nav-logo">My Learning Journal</h1>
+            <div class="nav-logo">
+                <h2>📚 Learning Journal</h2>
+            </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="journal.html">Journal</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="journal.html" class="nav-link">Journal</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
-<header class="hero about-hero">
-    <div class="hero-content">
-        <h1 class="hero-title">About Me</h1>
-        <p class="hero-subtitle">Get to know my journey and skills</p>
-    </div>
-</header>
+
+    <header class="hero about-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">About Me</h1>
+            <p class="hero-subtitle">Get to know my journey and skills</p>
+        </div>
+    </header>
+
     <main class="container">
-        <section class="profile">
-            <h2>About Me</h2>
-            <div class="profile-content">
-                <div class="profile-text">
+        <section class="about-preview">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Me</h2>
                     <p>Hello! I'm a Computer Science student passionate about mobile development and creative technology.</p>
                     <p>This learning journal documents my journey through the Mobile Application Development course, where I'm building skills in frontend development, responsive design, and progressive web apps.</p>
                     <h3>Skills</h3>
@@ -37,14 +49,28 @@
                         <li>JavaScript</li>
                         <li>Responsive Design</li>
                         <li>Mobile-First Development</li>
+                        <li>Progressive Web Apps</li>
+                        <li>Git & GitHub</li>
                     </ul>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">👨‍💻</div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 My Learning Journal</p>
+        <div class="footer-content">
+            <p>&copy; 2024 My Learning Journal. Built with HTML & CSS.</p>
+        </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
