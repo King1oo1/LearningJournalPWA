@@ -46,7 +46,7 @@ body {
 
 /*  Add hover effect for the logo */
 .nav-logo:hover {
-    opacity: 0.8; /* Slight fade on hover */
+    opacity: 0.7; /* Slight fade on hover */
 }
 
 /* Hide checkbox */
