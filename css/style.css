@@ -19,10 +19,12 @@ body {
 }
 
 /* Navigation - Mobile First */
+/* Navigation - Mobile First with Dropdown */
 .navbar {
     background-color: #2c3e50;
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
 }
 
 .nav-container {
@@ -40,25 +42,36 @@ body {
     font-weight: bold;
 }
 
-.nav-menu {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #2c3e50;
+/* Hide checkbox */
+.nav-toggle {
     display: none;
 }
 
-.nav-menu.active {
+/* Hamburger menu */
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-toggle-label span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Navigation menu */
+.nav-menu {
+    list-style: none;
     display: flex;
+    gap: 0;
 }
 
 .nav-menu li {
-    width: 100%;
-    text-align: center;
+    margin: 0;
 }
 
 .nav-menu a {
@@ -72,6 +85,48 @@ body {
 .nav-menu a:hover,
 .nav-menu a.active {
     background-color: #34495e;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+    .nav-toggle-label {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        flex-direction: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.3s ease;
+    }
+    
+    .nav-toggle:checked ~ .nav-menu {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    /* Hamburger animation */
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+    }
 }
 
 /* Hero Section */
