@@ -40,8 +40,13 @@ body {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
+    text-decoration: none; /* Remove underline from link */
 }
 
+/* hover effect for the logo */
+.nav-logo:hover {
+    opacity: 0.8; /* Slight fade on hover */
+}
 /* Hide checkbox */
 .nav-toggle {
     display: none;
