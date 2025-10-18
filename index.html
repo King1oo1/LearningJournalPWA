@@ -16,21 +16,24 @@
 <body>
     <!-- Body contains all visible content -->
     <nav class="navbar">
-        <!-- Navigation bar semantic element -->
-        <div class="nav-container">
-            <!-- Container div for nav content -->
-            <div class="nav-logo">Chandandeep Singh</div>
-            <!-- Div for logo/name -->
-            <ul class="nav-menu">
-                <!-- Unordered list for navigation links -->
-                <li><a href="index.html" class="active">Home</a></li>
-                <!-- List item with link, 'active' class for current page -->
-                <li><a href="journal.html">Journal</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="nav-container">
+        <div class="nav-logo">Chandandeep Singh</div>
+        
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </div>
+</nav>
 
     <main class="container">
         <!-- Main content area semantic element -->
