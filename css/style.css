@@ -2,23 +2,24 @@
 * {
     margin: 0;
     padding: 0;
+     /* Border-box includes padding and border in element's total width/height */
     box-sizing: border-box;
 }
-
+/* Base body styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
 }
-
+/* Container for centering content with max-width */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Navigation - Mobile First */
+
 /* Navigation - Mobile First with Dropdown */
 .navbar {
     background-color: #2c3e50;
@@ -60,7 +61,7 @@ body {
     cursor: pointer;
     padding: 5px;
 }
-
+/* Hamburger menu bars */
 .nav-toggle-label span {
     width: 25px;
     height: 3px;
